@@ -5,6 +5,7 @@
     This is a permutation problem.
     We can use DFS or Backtracking to solve it.
 """
+from typing import List
 
 
 class Solution1:
@@ -12,7 +13,7 @@ class Solution1:
         Backtracking
     """
 
-    def solveNQueens(self, n: int) -> list[list[str]]:
+    def solveNQueens(self, n: int) -> List[List[str]]:
         res, board = [], [['.'] * n for _ in range(n)]
         self.backtrack(board, 0, res)
         return res
@@ -66,7 +67,7 @@ class Solution2:
         Queen on row 1 locates at column 3, and so on.
     """
 
-    def solveNQueens(self, n: int) -> list[list[str]]:
+    def solveNQueens(self, n: int) -> List[List[str]]:
         def dfs(queens=[], xy_diff=[], xy_sum=[]):
             length = len(queens)
             if length == n:

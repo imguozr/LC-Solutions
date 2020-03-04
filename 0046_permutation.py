@@ -1,9 +1,12 @@
+from typing import List
+
+
 class Solution1:
     """
         Backtrack.
     """
 
-    def permute(self, nums: list[int]) -> list[list[int]]:
+    def permute(self, nums: List[int]) -> List[List[int]]:
         res = []
         self.backtrack(nums, [], res)
         return res
@@ -28,7 +31,7 @@ class Solution2:
         Generate directly.
     """
 
-    def permute(self, nums: list[int]) -> list[list[int]]:
+    def permute(self, nums: List[int]) -> List[List[int]]:
         perms = [[]]
         for n in nums:
             new_perms = []

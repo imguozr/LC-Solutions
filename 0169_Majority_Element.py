@@ -1,9 +1,12 @@
+from typing import List
+
+
 class Solution:
     """
         Boyer-Moore Majority Vote Algorithm. Like # 229.
     """
 
-    def majorityElement(self, nums: list[int]) -> int:
+    def majorityElement(self, nums: List[int]) -> int:
         res, cnt = 0, 0
         for num in nums:
             if not cnt:

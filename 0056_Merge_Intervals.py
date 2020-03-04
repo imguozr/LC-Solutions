@@ -1,9 +1,12 @@
+from typing import List
+
+
 class Solution:
     """
         Greedy.
     """
 
-    def merge(self, intervals: list[list[int]]) -> list[list[int]]:
+    def merge(self, intervals: List[List[int]]) -> List[List[int]]:
         # Sort by start.
         intervals.sort(key=lambda x: x[0])
 

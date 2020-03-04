@@ -1,4 +1,5 @@
 import functools
+from typing import List
 
 
 class TreeNode:
@@ -18,7 +19,7 @@ class Solution:
         Can use cache to improve performance.
     """
 
-    def generateTrees(self, n: int) -> list[TreeNode]:
+    def generateTrees(self, n: int) -> List[TreeNode]:
         if not n:
             return []
         return self.generate_subtrees(1, n)

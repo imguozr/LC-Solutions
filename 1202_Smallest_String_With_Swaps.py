@@ -1,4 +1,5 @@
 from collections import defaultdict
+from typing import List
 
 
 class Solution:
@@ -6,7 +7,7 @@ class Solution:
         Intuition: if (0, 1) and (0, 2) are two exchange pairs, then any 2 items in (0, 1, 2) can be exchanged.
     """
 
-    def smallestStringWithSwaps(self, s: str, pairs: list[list[int]]) -> str:
+    def smallestStringWithSwaps(self, s: str, pairs: List[List[int]]) -> str:
         class UnionFind:
             """
                 Union Find Algorithm.

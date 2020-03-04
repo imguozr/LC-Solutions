@@ -1,4 +1,5 @@
 import math
+from typing import List
 
 
 class Solution:
@@ -6,7 +7,7 @@ class Solution:
         I dont know what the algorithm is...
     """
 
-    def closestDivisors(self, num: int) -> list[int]:
+    def closestDivisors(self, num: int) -> List[int]:
         def helper(n):
             s = int(math.sqrt(n) // 1)
             for v1 in range(s, 1, -1):

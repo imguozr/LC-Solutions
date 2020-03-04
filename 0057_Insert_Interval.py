@@ -1,10 +1,13 @@
+from typing import List
+
+
 class Solution:
     """
         1. Insert new_interval into original list, return this question into #56 (Merge Intervals)
         2. Greedy.
     """
 
-    def insert_1(self, intervals: list[list[int]], new_interval: list[int]) -> list[list[int]]:
+    def insert_1(self, intervals: List[List[int]], new_interval: List[int]) -> List[List[int]]:
         intervals.append(new_interval)
         intervals.sort(key=lambda x: x[0])
 
@@ -16,7 +19,7 @@ class Solution:
                 res.append(itvl)
         return res
 
-    def insert_2(self, intervals: list[list[int]], new_interval: list[int]) -> list[list[int]]:
+    def insert_2(self, intervals: List[List[int]], new_interval: List[int]) -> List[List[int]]:
         """
             1. Add to the output all the intervals starting before new interval.
             2. Add to the output newInterval. Merge it with the last added interval

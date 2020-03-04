@@ -1,10 +1,13 @@
+from typing import List
+
+
 class Solution:
     """
         Count the rank of vote for each candidate.
         Sort all teams according to the ranking system.
     """
 
-    def rankTeams(self, votes: list[str]) -> str:
+    def rankTeams(self, votes: List[str]) -> str:
         records = {ch: [0] * len(votes[0]) for ch in votes[0]}
         for vote in votes:
             for i, ch in enumerate(vote):

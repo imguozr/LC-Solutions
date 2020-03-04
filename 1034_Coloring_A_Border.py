@@ -1,10 +1,13 @@
+from typing import List
+
+
 class Solution:
     """
         Similar with # 733.
         https://mp.weixin.qq.com/s/Y7snQIraCC6PRhj9ZSnlzw
     """
 
-    def colorBorder_1(self, grid: list[list[int]], r0: int, c0: int, color: int) -> list[list[int]]:
+    def colorBorder_1(self, grid: List[List[int]], r0: int, c0: int, color: int) -> List[List[int]]:
         """
             DFS
         """
@@ -24,7 +27,7 @@ class Solution:
         dfs(r0, c0)
         return grid
 
-    def colorBorder_2(self, grid: list[list[int]], r0: int, c0: int, color: int) -> list[list[int]]:
+    def colorBorder_2(self, grid: List[List[int]], r0: int, c0: int, color: int) -> List[List[int]]:
         """
             BFS 1
         """
@@ -44,7 +47,7 @@ class Solution:
             grid[x][y] = color
         return grid
 
-    def colorBorder_3(self, grid: list[list[int]], r0: int, c0: int, color: int) -> list[list[int]]:
+    def colorBorder_3(self, grid: List[List[int]], r0: int, c0: int, color: int) -> List[List[int]]:
         """
             BFS 2. Color border directly.
         """

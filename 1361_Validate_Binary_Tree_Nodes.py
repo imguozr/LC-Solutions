@@ -1,9 +1,12 @@
+from typing import List
+
+
 class Solution:
     """
         DFS and HashSet.
     """
 
-    def validateBinaryTreeNodes(self, n: int, left: list[int], right: list[int]) -> bool:
+    def validateBinaryTreeNodes(self, n: int, left: List[int], right: List[int]) -> bool:
         stack = [0]
         visited = {0}
         while stack:

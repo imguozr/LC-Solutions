@@ -1,5 +1,8 @@
+from typing import List
+
+
 class Solution:
-    def trap_1(self, height: list[int]) -> int:
+    def trap_1(self, height: List[int]) -> int:
         """
             Brutal Force. Think in columns.
             For each column, find the highest left and right wall.
@@ -24,7 +27,7 @@ class Solution:
                 res += valid_wall - height[i]
         return res
 
-    def trap_2(self, height: list[int]) -> int:
+    def trap_2(self, height: List[int]) -> int:
         """
             Dynamic Programming. Use 2 lists to reduce time cost.
             Calculate highest left and right wall in the beginning.
@@ -45,7 +48,7 @@ class Solution:
                 res += valid_wall - height[i]
         return res
 
-    def trap_3(self, height: list[int]) -> int:
+    def trap_3(self, height: List[int]) -> int:
         """
             Two pointers. Use 2 integers to record highest left and right wall.
             Proof:
@@ -78,7 +81,7 @@ class Solution:
                 right -= 1
         return res
 
-    def trap_4(self, height: list[int]) -> int:
+    def trap_4(self, height: List[int]) -> int:
         """
             Use stack to store the index of each wall.
             If current height <= stack peek height:

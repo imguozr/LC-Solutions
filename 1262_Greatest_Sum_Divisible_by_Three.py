@@ -1,3 +1,6 @@
+from typing import List
+
+
 class Solution:
     """
         DP.
@@ -5,7 +8,7 @@ class Solution:
         the formula of *, # can be settled by math.
     """
 
-    def maxSumDivThree_1(self, nums: list[int]) -> int:
+    def maxSumDivThree_1(self, nums: List[int]) -> int:
         """
             Time Complexity: O(n)
             Space Complexity: O[3(n+1)] = O(n)
@@ -30,7 +33,7 @@ class Solution:
 
         return dp[-1][0]
 
-    def maxSumDivThree_2(self, nums: list[int]) -> int:
+    def maxSumDivThree_2(self, nums: List[int]) -> int:
         dp = [0, 0, 0]
         for num in nums:
             for i in dp[:]:

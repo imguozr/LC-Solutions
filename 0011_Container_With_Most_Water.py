@@ -1,3 +1,6 @@
+from typing import List
+
+
 class Solution:
     """
         Two pointers.
@@ -5,7 +8,7 @@ class Solution:
         Record the maximum area, return it when two pointers coincide.
     """
 
-    def maxArea(self, heights: list[int]) -> int:
+    def maxArea(self, heights: List[int]) -> int:
         if not heights or len(heights) < 2:
             return 0
 

@@ -1,9 +1,12 @@
+from typing import List
+
+
 class Solution:
     """
         Greedy.
     """
 
-    def jump(self, nums: list[int]) -> int:
+    def jump(self, nums: List[int]) -> int:
         end, farthest, steps = 0, 0, 0
         for i in range(len(nums) - 1):
             # farthest position can reach

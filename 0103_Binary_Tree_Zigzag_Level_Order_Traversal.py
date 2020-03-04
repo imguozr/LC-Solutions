@@ -1,3 +1,6 @@
+from typing import List
+
+
 class TreeNode:
     def __init__(self, x):
         self.val = x
@@ -10,7 +13,7 @@ class Solution:
         BFS
     """
 
-    def zigzagLevelOrder_1(self, root: TreeNode) -> list[list[int]]:
+    def zigzagLevelOrder_1(self, root: TreeNode) -> List[List[int]]:
         from collections import deque
 
         if not root:
@@ -33,7 +36,7 @@ class Solution:
             level += 1
         return res
 
-    def zigzagLevelOrder_2(self, root: TreeNode) -> list[list[int]]:
+    def zigzagLevelOrder_2(self, root: TreeNode) -> List[List[int]]:
         from collections import deque
 
         if not root:

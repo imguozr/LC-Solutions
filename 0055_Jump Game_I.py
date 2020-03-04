@@ -1,9 +1,12 @@
+from typing import List
+
+
 class Solution:
     """
         Dynamic Programming.
     """
 
-    def canJump_1(self, nums: list[int]) -> bool:
+    def canJump_1(self, nums: List[int]) -> bool:
         """
             Brutal Force.
         """
@@ -19,7 +22,7 @@ class Solution:
 
         return helper(0)
 
-    def canJump_2(self, nums: list[int]) -> bool:
+    def canJump_2(self, nums: List[int]) -> bool:
         """
             DP(Top-Down)
         """
@@ -43,7 +46,7 @@ class Solution:
 
         return helper(0)
 
-    def canJump_3(self, nums: list[int]) -> bool:
+    def canJump_3(self, nums: List[int]) -> bool:
         """
             DP(Bottom-up)
         """
@@ -60,7 +63,7 @@ class Solution:
 
         return dp[0] == 1
 
-    def canJump_4(self, nums: list[int]) -> bool:
+    def canJump_4(self, nums: List[int]) -> bool:
         """
             Greedy 1
         """
@@ -70,7 +73,7 @@ class Solution:
                 end = i
         return end == 0
 
-    def canJump(self, nums: list[int]) -> bool:
+    def canJump(self, nums: List[int]) -> bool:
         """
             Greedy 2
             1. If one element (start point) in the list is n, it means n elements after can be start points.

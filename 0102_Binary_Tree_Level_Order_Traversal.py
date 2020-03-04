@@ -1,3 +1,6 @@
+from typing import List
+
+
 class TreeNode:
     def __init__(self, x):
         self.val = x
@@ -10,7 +13,7 @@ class Solution:
         BFS.
     """
 
-    def levelOrder_1(self, root: TreeNode) -> list[list[int]]:
+    def levelOrder_1(self, root: TreeNode) -> List[List[int]]:
         """
             Solve recursively.
         """
@@ -33,7 +36,7 @@ class Solution:
         helper(root, 0, res)
         return res
 
-    def levelOrder_2(self, root: TreeNode) -> list[list[int]]:
+    def levelOrder_2(self, root: TreeNode) -> List[List[int]]:
         """
             Solve iteratively by using queue.
         """
@@ -54,7 +57,7 @@ class Solution:
             level += 1
         return res
 
-    def levelOrder_3(self, root: TreeNode) -> list[list[int]]:
+    def levelOrder_3(self, root: TreeNode) -> List[List[int]]:
         """
             Solve iteratively by using stack.
         """

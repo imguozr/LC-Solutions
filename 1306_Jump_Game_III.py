@@ -1,9 +1,12 @@
+from typing import List
+
+
 class Solution:
     """
         BFS
     """
 
-    def canReach_1(self, arr: list[int], start: int) -> bool:
+    def canReach_1(self, arr: List[int], start: int) -> bool:
         """
             Recursively.
         """
@@ -20,7 +23,7 @@ class Solution:
 
         return helper(start)
 
-    def canReach_2(self, arr: list[int], start: int) -> bool:
+    def canReach_2(self, arr: List[int], start: int) -> bool:
         """
             Iteratively
         """

@@ -1,3 +1,6 @@
+from typing import List
+
+
 class Solution:
     """
         We can use a Counter to solve such problem if not having limitations on O(1) space.
@@ -7,7 +10,7 @@ class Solution:
         And because we have most 2 variables, we can use 2 counts and 2 candidates.
     """
 
-    def majorityElement(self, nums: list[int]) -> list[int]:
+    def majorityElement(self, nums: List[int]) -> List[int]:
         if not nums:
             return []
         count1, count2, candidate1, candidate2 = 0, 0, 0, 1
